@@ -1,0 +1,213 @@
+body {
+    background-color: #323C5D;
+}
+
+.input-box {
+    display: flex;
+    align-items: center;
+    width: 125px;
+    background: #CCC;
+    border: 1px solid #a0a0a0;
+    border-radius: 4px;
+    padding-left: 0.5rem;
+    margin-right: 50px;
+}
+
+.input-box .prefix {
+    font-weight: 300;
+    font-size: 14px;
+    color: #999;
+    padding-right: 8px;
+}
+
+.input-box input {
+    flex-grow: 0.99;
+    font-size: 14px;
+    background: #fff;
+    border: none;
+    border-radius: 4px;
+    outline: none;
+    padding: 0.3rem;
+    width: 50px;
+}
+
+.input-box:focus-within {
+    border-color: #777;
+}
+
+.form {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    min-height: 100px;
+}
+
+select {
+    margin-right: 50px;
+    border-radius: 4px;
+    font-size: 16px;
+}
+
+.submit-button {
+    background-color: #323C5D;
+    border: 2px solid #85bb65;
+    color: white;
+    padding: 10px 16px;
+    text-align: center;
+    font-size: 16px;
+    border-radius: 4px;
+}
+
+.submit-button:hover {
+    outline: none;
+    background-color: #85bb65;
+    border-color: #85bb65;
+}
+
+.budget-summary-box {
+    display: flex;
+    width: 100%;
+    justify-content: space-evenly;
+    align-items: center;
+    padding-bottom: 40px;
+}
+
+.logo-image {
+    width: 25%;
+    height: 25%;
+}
+
+.budget-summary {
+    background-color: #323C5D;
+    width: 50vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    scroll-margin-top: 100px;
+}
+
+.budget-title {
+    font-size: 32px;
+    font-weight: 800;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.budget-value {
+    font-size: 46px;
+    font-weight: 300;
+    letter-spacing: 2px;
+    margin-bottom: 30px;
+}
+
+.income-head,
+.expenses-head {
+    text-transform: uppercase;
+    font-size: 14px;
+    display: flex;
+    padding: 15px;
+    width: 30vh;
+    border-radius: 15px;
+}
+
+.income-head {
+    margin-bottom: 20px;
+    background-color: #85bb65;
+}
+
+.expenses-head {
+    background-color: #bb7065;
+    margin-bottom: 40px;
+}
+
+.income-value,
+.expenses-value {
+    margin-left: auto;
+    letter-spacing: 1px;
+}
+
+.tabs {
+    width: 100%;
+    text-align: center;
+    height: 40px;
+    border-bottom: 1px solid #e7e7e7;
+    background-color: #f7f7f7;
+    color: gray;
+    font-weight: 600;
+    letter-spacing: 1px;
+    padding: 10px;
+}
+
+.analytics-totals {
+    background-color: white;
+    color: black;
+    display: flex;
+    justify-content: space-evenly;
+    letter-spacing: 1px;
+    padding-bottom: 50px;
+}
+
+.full-table {
+    border: 1px solid black;
+    border-radius: 15px;
+    margin-top: 40px;
+    padding: 10px;
+}
+
+.compTable {
+    padding-top: 20px;
+    height: 200px;
+    width: 25vw;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.table-title {
+    text-align: center;
+    font-size: 26px;
+    font-weight: 600;
+    letter-spacing: 1px;
+}
+
+.needsPctDiff,
+.wantsPctDiff,
+.savingsPctDiff {
+    text-align: center;
+    font-size: 12px;
+    background-color: #D3D3D3;
+    border-radius: 15px;
+}
+
+.greaterThanRec {
+    background-color: #bb7065;
+}
+
+.lessThanRec {
+    background-color: #85bb65;
+}
+
+.budgetCatsTable {
+    background-color: white;
+    color: black;
+    width: 100%;
+    padding-left: 50px;
+    padding-right: 50px;
+}
+
+.budgetCatsTableCell,
+.budgetCatsTableAmt,
+.budgetCatsTableInfo {
+    border-bottom: 1px solid black;
+}
+
+.budgetCatsTableAmt {
+    padding-left: 10%;
+}
+
+.budgetCatsTableInfo {
+    text-indent: 25px;
+    padding-left: 10px;
+    padding-right: 10px;
+}

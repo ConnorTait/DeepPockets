@@ -1,0 +1,472 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link href="../style/manualBudgetDashboard.css" rel="stylesheet">
+    <link href="../style/main.css" rel="stylesheet">
+    <script src="../scripts/main.js"></script>
+
+    <link rel="icon" href="../images/favicon.ico" type="image/x-icon">
+    <link rel="shortcut icon" href="../images/favicon.ico" type="image/x-icon">
+
+    <title>Budget Inputs</title>
+</head>
+
+<body>
+    <header>
+        <a href="../HTML/home.html" class="title-link">
+            <img src="../images/logo-no-background.png" class="logo">
+        </a>
+
+        <nav class="navbar">
+            <a href="../HTML/autoBudgetDashboard.html" class="link">Automatic<br>Budget Tool</a>
+            <a href="../HTML/manualBudgetDashboard.html" class="link">Manual<br>Budget Tool</a>
+            <a href="../HTML/about.html" class="link">About</a>
+        </nav>
+    </header>
+
+    <main>
+        <div class="input-section-title">Income</div>
+        <div class="input-section-1">
+            <div class="input-container">
+                <label for="salary">Monthly After-tax Income:</label>
+                <div class="input-box">
+                    <span class="prefix">$</span>
+                    <input type="number" id="salary" name="salary" placeholder="0" />
+                </div>
+            </div>
+
+            <div class="input-container">
+                <label for="addnlInc">Any additional income<br>(rental, financial aid, self-employment,<br>child
+                    support,
+                    pension,
+                    etc.):</label>
+                <div class="input-box">
+                    <span class="prefix">$</span>
+                    <input type="number" id="addnlInc" name="addnlInc" placeholder="0" />
+                </div>
+            </div>
+        </div>
+
+        <div class="input-section-title">Needs</div>
+        <table class="input-section-2">
+            <tr>
+                <td class="input-container-2">
+                    <label for="rent">Rent/Mortgage:</label>
+                    <div class="input-box">
+                        <span class="prefix">$</span>
+                        <input type="number" id="rent" name="rent" placeholder="0" />
+                    </div>
+                </td>
+
+                <td class="input-container-2">
+                    <label for="homeIns">Homeowners or renters<br>insurance:</label>
+                    <div class="input-box">
+                        <span class="prefix">$</span>
+                        <input type="number" id="homeIns" name="homeIns" placeholder="0" />
+                    </div>
+                </td>
+
+                <td class="input-container-2">
+                    <label for="autoIns">Auto insurance:</label>
+                    <div class="input-box">
+                        <span class="prefix">$</span>
+                        <input type="number" id="autoIns" name="autoIns" placeholder="0" />
+                    </div>
+                </td>
+
+                <td class="input-container-2">
+                    <label for="healthIns">Health insurance:</label>
+                    <div class="input-box">
+                        <span class="prefix">$</span>
+                        <input type="number" id="healthIns" name="healthIns" placeholder="0" />
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <td class="input-container-2">
+                    <label for="oopmc">Out-of-pocket medical costs:</label>
+                    <div class="input-box">
+                        <span class="prefix">$</span>
+                        <input type="number" id="oopmc" name="oopmc" placeholder="0" />
+                    </div>
+                </td>
+
+                <td class="input-container-2">
+                    <label for="lifeIns">Life insurance:</label>
+                    <div class="input-box">
+                        <span class="prefix">$</span>
+                        <input type="number" id="lifeIns" name="lifeIns" placeholder="0" />
+                    </div>
+                </td>
+
+                <td class="input-container-2">
+                    <label for="ele/gas">Electricity and natural gas bill:</label>
+                    <div class="input-box">
+                        <span class="prefix">$</span>
+                        <input type="number" id="ele/gas" name="ele/gas" placeholder="0" />
+                    </div>
+                </td>
+
+                <td class="input-container-2">
+                    <label for="water">Water bill:</label>
+                    <div class="input-box">
+                        <span class="prefix">$</span>
+                        <input type="number" id="water" name="water" placeholder="0" />
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <td class="input-container-2">
+                    <label for="trash">Sanitation/garbage bill:</label>
+                    <div class="input-box">
+                        <span class="prefix">$</span>
+                        <input type="number" id="trash" name="trash" placeholder="0" />
+                    </div>
+                </td>
+
+                <td class="input-container-2">
+                    <label for="groc">Groceries, toiletries<br>and other essentials:</label>
+                    <div class="input-box">
+                        <span class="prefix">$</span>
+                        <input type="number" id="groc" name="groc" placeholder="0" />
+                    </div>
+                </td>
+
+                <td class="input-container-2">
+                    <label for="carPay">Car payment:</label>
+                    <div class="input-box">
+                        <span class="prefix">$</span>
+                        <input type="number" id="carPay" name="carPay" placeholder="0" />
+                    </div>
+                </td>
+
+                <td class="input-container-2">
+                    <label for="carMaint">Car maintainance:</label>
+                    <div class="input-box">
+                        <span class="prefix">$</span>
+                        <input type="number" id="carMaint" name="carMaint" placeholder="0" />
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <td class="input-container-2">
+                    <label for="carGas">Gasoline:</label>
+                    <div class="input-box">
+                        <span class="prefix">$</span>
+                        <input type="number" id="carGas" name="carGas" placeholder="0" />
+                    </div>
+                </td>
+
+                <td class="input-container-2">
+                    <label for="pubTrans">Public Transportation:</label>
+                    <div class="input-box">
+                        <span class="prefix">$</span>
+                        <input type="number" id="pubTrans" name="pubTrans" placeholder="0" />
+                    </div>
+                </td>
+
+                <td class="input-container-2">
+                    <label for="phone">Phone bill:</label>
+                    <div class="input-box">
+                        <span class="prefix">$</span>
+                        <input type="number" id="phone" name="phone" placeholder="0" />
+                    </div>
+                </td>
+
+                <td class="input-container-2">
+                    <label for="otherNeeds">Other:</label>
+                    <div class="input-box">
+                        <span class="prefix">$</span>
+                        <input type="number" id="otherNeeds" name="otherNeeds" placeholder="0" />
+                    </div>
+                </td>
+            </tr>
+        </table>
+
+        <div class="input-section-title">Wants</div>
+        <table class="input-section-3">
+            <tr>
+
+                <td class="input-container-3">
+                    <label for="cloAcc">Clothing, accessiories, etc.:</label>
+                    <div class="input-box">
+                        <span class="prefix">$</span>
+                        <input type="number" id="cloAcc" name="cloAcc" placeholder="0" />
+                    </div>
+                </td>
+
+                <td class="input-container-3">
+                    <label for="eatOut">Eating out:</label>
+                    <div class="input-box">
+                        <span class="prefix">$</span>
+                        <input type="number" id="eatOut" name="eatOut" placeholder="0" />
+                    </div>
+                </td>
+
+                <td class="input-container-3">
+                    <label for="bars">Bars/alcohol:</label>
+                    <div class="input-box">
+                        <span class="prefix">$</span>
+                        <input type="number" id="bars" name="bars" placeholder="0" />
+                    </div>
+                </td>
+
+                <td class="input-container-3">
+                    <label for="specEve">Special events<br>(concerts, sporting events, etc.):</label>
+                    <div class="input-box">
+                        <span class="prefix">$</span>
+                        <input type="number" id="specEve" name="specEve" placeholder="0" />
+                    </div>
+                </td>
+
+                <td class="input-container-3">
+                    <label for="clubMem">Gym/club memberships:</label>
+                    <div class="input-box">
+                        <span class="prefix">$</span>
+                        <input type="number" id="clubMem" name="clubMem" placeholder="0" />
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <td class="input-container-3">
+                    <label for="trav">Travel:</label>
+                    <div class="input-box">
+                        <span class="prefix">$</span>
+                        <input type="number" id="trav" name="trav" placeholder="0" />
+                    </div>
+                </td>
+
+                <td class="input-container-3">
+                    <label for="pets">Pet expenses:</label>
+                    <div class="input-box">
+                        <span class="prefix">$</span>
+                        <input type="number" id="pets" name="pets" placeholder="0" />
+                    </div>
+                </td>
+
+                <td class="input-container-3">
+                    <label for="tvSvc">Cable/Streaming services:</label>
+                    <div class="input-box">
+                        <span class="prefix">$</span>
+                        <input type="number" id="tvSvc" name="tvSvc" placeholder="0" />
+                    </div>
+                </td>
+
+                <td class="input-container-3">
+                    <label for="homeDec">Home decor:</label>
+                    <div class="input-box">
+                        <span class="prefix">$</span>
+                        <input type="number" id="homeDec" name="homeDec" placeholder="0" />
+                    </div>
+                </td>
+
+                <td class="input-container-3">
+                    <label for="otherWants">Other:</label>
+                    <div class="input-box">
+                        <span class="prefix">$</span>
+                        <input type="number" id="otherWants" name="otherWants" placeholder="0" />
+                    </div>
+                </td>
+            </tr>
+        </table>
+        <div class="input-section-title">Savings and Payments</div>
+        <table class="input-section-4">
+            <tr>
+                <td class="input-container-4">
+                    <label for="emeFnd">Emergency fund contributions:</label>
+                    <div class="input-box">
+                        <span class="prefix">$</span>
+                        <input type="number" id="emeFnd" name="emeFnd" placeholder="0" />
+                    </div>
+                </td>
+
+                <td class="input-container-4">
+                    <label for="savCnt">Savings Account contributions:</label>
+                    <div class="input-box">
+                        <span class="prefix">$</span>
+                        <input type="number" id="savCnt" name="savCnt" placeholder="0" />
+                    </div>
+                </td>
+
+                <td class="input-container-4">
+                    <label for="401kCnt">401(k) contributions:</label>
+                    <div class="input-box">
+                        <span class="prefix">$</span>
+                        <input type="number" id="401kCnt" name="401kCnt" placeholder="0" />
+                    </div>
+                </td>
+
+                <td class="input-container-4">
+                    <label for="retCnt">Individual retirement account contributions:</label>
+                    <div class="input-box">
+                        <span class="prefix">$</span>
+                        <input type="number" id="retCnt" name="retCnt" placeholder="0" />
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <td class="input-container-4">
+                    <label for="otherInv">Other investments:</label>
+                    <div class="input-box">
+                        <span class="prefix">$</span>
+                        <input type="number" id="otherInv" name="otherInv" placeholder="0" />
+                    </div>
+                </td>
+
+                <td class="input-container-4">
+                    <label for="ccPay">Credit card payments:</label>
+                    <div class="input-box">
+                        <span class="prefix">$</span>
+                        <input type="number" id="ccPay" name="ccPay" placeholder="0" />
+                    </div>
+                </td>
+
+                <td class="input-container-4">
+                    <label for="exLnPay">Excess loan payments:</label>
+                    <div class="input-box">
+                        <span class="prefix">$</span>
+                        <input type="number" id="exLnPay" name="exLnPay" placeholder="0" />
+                    </div>
+                </td>
+
+                <td class="input-container-4">
+                    <label for="otherSavings">Other:</label>
+                    <div class="input-box">
+                        <span class="prefix">$</span>
+                        <input type="number" id="otherSavings" name="otherSavings" placeholder="0" />
+                    </div>
+                </td>
+            </tr>
+        </table>
+
+        <a href="#budget-summary">
+            <button type="button" class="submit-button" onclick="submitValues()">&#8659; Analyze your budget
+                &#8659;</button>
+        </a>
+
+        <div class="budget-summary-box" id="budget-summary-box">
+            <img src="../images/deep-pockets-low-resolution-logo-white-on-transparent-background.png"
+                class="logo-image">
+            <div class="budget-summary" id="budget-summary">
+                <div class="budget-title">Available for savings this month:</div>
+                <div class="budget-value" id="budget-value">$---</div>
+                <div class="income-head">
+                    <p>Income</p>
+                    <p class="income-value" id="income-value">$---</p>
+                </div>
+                <div class="expenses-head">
+                    <p>Expenses</p>
+                    <p class="expenses-value" id="expenses-value">$---</p>
+                </div>
+            </div>
+            <img src="../images/deep-pockets-low-resolution-logo-white-on-transparent-background.png"
+                class="logo-image">
+        </div>
+        <div class="tabs">
+            Analytics
+        </div>
+        <div class="analytics-totals">
+            <div class="full-table">
+                <p class="table-title">Expense Breakdown:</p>
+                <table class="compTable">
+                    <tr>
+                        <td>Needs:</td>
+                        <td id="needsActVal">$---</td>
+                        <td id="needsActPct">--%</td>
+                        <td id="needsPctDiff" class="needsPctDiff"> --%</td>
+                    </tr>
+                    <tr>
+                        <td>Wants:</td>
+                        <td id="wantsActVal">$---</td>
+                        <td id="wantsActPct">--%</td>
+                        <td id="wantsPctDiff" class="wantsPctDiff">--%</td>
+                    </tr>
+                    <tr>
+                        <td>Savings:</td>
+                        <td id="savingsActVal">$---</td>
+                        <td id="savingsActPct">--%</td>
+                        <td id="savingsPctDiff" class="savingsPctDiff">--%</td>
+                    </tr>
+                </table>
+            </div>
+
+            <div class="full-table">
+                <p class="table-title">50/30/20 Comparison:</p>
+                <table class="compTable">
+                    <tr>
+                        <td>Needs:</td>
+                        <td id="needsCompVal">$---</td>
+                        <td>50%</td>
+                    </tr>
+                    <tr>
+                        <td>Wants:</td>
+                        <td id="wantsCompVal">$---</td>
+                        <td>30%</td>
+                    </tr>
+                    <tr>
+                        <td>Savings:</td>
+                        <td id="savingsCompVal">$---</td>
+                        <td>20%</td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+
+        <table class="budgetCatsTable">
+            <colgroup>
+                <col span="1" style="width: 20%;">
+                <col span="1" style="width: 30%;">
+                <col span="1" style="width: 50%;">
+            </colgroup>
+            <tr>
+                <th class="budgetCatsTableCell">Budget Category</th>
+                <th class="budgetCatsTableCell">Amount Spent</th>
+                <th class="budgetCatsTableCell">Info</th>
+            </tr>
+            <tr>
+                <td class="budgetCatsTableCell">Transportation</td>
+                <td id="transAmt" class="budgetCatsTableAmt">$-</td>
+                <td id="transInfo" class="budgetCatsTableInfo"></td>
+            </tr>
+            <tr>
+                <td class="budgetCatsTableCell">Housing</td>
+                <td id="houseAmt" class="budgetCatsTableAmt">$-</td>
+                <td id="houseInfo" class="budgetCatsTableInfo"></td>
+            </tr>
+            <tr>
+                <td class="budgetCatsTableCell">Insurance</td>
+                <td id="insAmt" class="budgetCatsTableAmt">$-</td>
+                <td id="insInfo" class="budgetCatsTableInfo"></td>
+            </tr>
+            <tr>
+                <td class="budgetCatsTableCell">Food</td>
+                <td id="foodAmt" class="budgetCatsTableAmt">$-</td>
+                <td id="foodInfo" class="budgetCatsTableInfo"></td>
+            </tr>
+            <tr>
+                <td class="budgetCatsTableCell">Entertainment</td>
+                <td id="entAmt" class="budgetCatsTableAmt">$-</td>
+                <td id="entInfo" class="budgetCatsTableInfo"></td>
+            </tr>
+            <tr>
+                <td class="budgetCatsTableCell">Debt repayments</td>
+                <td id="dbtRepAmt" class="budgetCatsTableAmt">$-</td>
+                <td id="dbtRepInfo" class="budgetCatsTableInfo"></td>
+            </tr>
+            <tr>
+                <td class="budgetCatsTableCell">Retirement</td>
+                <td id="retAmt" class="budgetCatsTableAmt">$-</td>
+                <td id="retInfo" class="budgetCatsTableInfo"></td>
+            </tr>
+
+        </table>
+    </main>
+
+
+</body>
+
+</html>

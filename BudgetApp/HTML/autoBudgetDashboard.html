@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link href="../style/autoBudgetDashboard.css" rel="stylesheet">
+    <link href="../style/main.css" rel="stylesheet">
+    <script src="../scripts/main.js"></script>
+
+    <link rel="icon" href="../images/favicon.ico" type="image/x-icon">
+    <link rel="shortcut icon" href="../images/favicon.ico" type="image/x-icon">
+
+    <title>Auto Budget Inputs</title>
+</head>
+
+<body>
+    <header>
+        <a href="../HTML/home.html" class="title-link">
+            <img src="../images/logo-no-background.png" class="logo">
+        </a>
+
+        <nav class="navbar">
+            <a href="../HTML/autoBudgetDashboard.html" class="link">Automatic<br>Budget Tool</a>
+            <a href="../HTML/manualBudgetDashboard.html" class="link">Manual<br>Budget Tool</a>
+            <a href="../HTML/about.html" class="link">About</a>
+        </nav>
+    </header>
+    <main>
+        <form class="form">
+            <select name="inputType" id="inputType" required style="max-width: 250px;">
+                <option value="null"></option>
+
+                <optgroup label="Income">
+                    <option value="salary" id="salary">Monthly After-tax Income
+                    </option>
+                    <option value="addnlInc" id="addnlInc">Any additional income
+                        (rental, financial aid, self-employment,
+                        child support, pension, etc.)</option>
+                </optgroup>
+
+                <optgroup label="Needs">
+                    <option value="rent" value="rent">Rent/Mortgage</option>
+                    <option value="homeIns" id="homeIns">Homeowners or renters insurance</option>
+                    <option value="autoIns" id="autoIns">Auto insurance</option>
+                    <option value="healthIns" id="healthIns">Health insurance</option>
+                    <option value="oopmc" id="oopmc">Out-of-pocket medical costs</option>
+                    <option value="lifeIns" id="lifeIns">Life insurance</option>
+                    <option value="ele/gas" id="ele/gas">Electricity and natural gas bill</option>
+                    <option value="trash" id="trash">Sanitation/garbage bill</option>
+                    <option value="groc" id="groc">Groceries, toiletries and other essentials</option>
+                    <option value="carPay" id="carPay">Car payment</option>
+                    <option value="carMaint" id="carMaint">Car maintainance</option>
+                    <option value="carGas" id="carGas">Gasoline</option>
+                    <option value="pubTrans" id="pubTrans">Public Transportation</option>
+                    <option value="phone" id="phone">Phone bill</option>
+                    <option value="otherNeeds" id="otherNeeds">Other Needs</option>
+                </optgroup>
+
+                <optgroup label="Wants">
+                    <option value="cloAcc" id="cloAcc">Clothing, accessiories, etc.</option>
+                    <option value="eatOut" id="eatOut">Eating out</option>
+                    <option value="bars" id="bars">Bars/alcohol</option>
+                    <option value="specEve" id="specEve">Special events<br>(concerts, sporting events, etc.)</option>
+                    <option value="clubMem" id="clubMem">Gym/club memberships</option>
+                    <option value="trav" id="trav">Travel</option>
+                    <option value="pets" id="pets">Pet expenses</option>
+                    <option value="tvSvc" id="tvSvc">Cable/Streaming services</option>
+                    <option value="homeDec" id="homeDec">Home decor</option>
+                    <option value="otherWants" id="otherWants">Other Wants</option>
+                </optgroup>
+
+                <optgroup label="Savings & Payments">
+                    <option value="emeFnd" id="emeFnd">Emergency fund contributions</option>
+                    <option value="savCnt" id="savCnt">Savings Account contributions</option>
+                    <option value="401kCnt" id="401kCnt">401(k) contributions</option>
+                    <option value="retCnt" id="retCnt">Individual retirement account contributions</option>
+                    <option value="otherInv" id="otherInv">Other investments</option>
+                    <option value="ccPay" id="ccPay">Credit card payments</option>
+                    <option value="exLnPay" id="exLnPay">Excess loan payments</option>
+                    <option value="otherSavings" id="otherSavings">Other Savings/Payments</option>
+                </optgroup>
+
+            </select>
+
+            <div class="input-box">
+                <span class="prefix">$</span>
+                <input type="number" id="dollarAMT" name="dollarAMT" placeholder="0" />
+            </div>
+
+            <button type="submit" class="submit-button" onclick="submitValues()">Add</button>
+        </form>
+
+        <div class="budget-summary-box" id="budget-summary-box">
+            <img src="../images/deep-pockets-low-resolution-logo-white-on-transparent-background.png"
+                class="logo-image">
+            <div class="budget-summary" id="budget-summary">
+                <div class="budget-title">Available for savings this month:</div>
+                <div class="budget-value" id="budget-value">$---</div>
+                <div class="income-head">
+                    <p>Income</p>
+                    <p class="income-value" id="income-value">$---</p>
+                </div>
+                <div class="expenses-head">
+                    <p>Expenses</p>
+                    <p class="expenses-value" id="expenses-value">$---</p>
+                </div>
+            </div>
+            <img src="../images/deep-pockets-low-resolution-logo-white-on-transparent-background.png"
+                class="logo-image">
+        </div>
+        <div class="tabs">
+            Analytics
+        </div>
+        <div class="analytics-totals">
+            <div class="full-table">
+                <p class="table-title">Expense Breakdown:</p>
+                <table class="compTable">
+                    <tr>
+                        <td>Needs:</td>
+                        <td id="needsActVal">$---</td>
+                        <td id="needsActPct">--%</td>
+                        <td id="needsPctDiff" class="needsPctDiff"> --%</td>
+                    </tr>
+                    <tr>
+                        <td>Wants:</td>
+                        <td id="wantsActVal">$---</td>
+                        <td id="wantsActPct">--%</td>
+                        <td id="wantsPctDiff" class="wantsPctDiff">--%</td>
+                    </tr>
+                    <tr>
+                        <td>Savings:</td>
+                        <td id="savingsActVal">$---</td>
+                        <td id="savingsActPct">--%</td>
+                        <td id="savingsPctDiff" class="savingsPctDiff">--%</td>
+                    </tr>
+                </table>
+            </div>
+
+            <div class="full-table">
+                <p class="table-title">50/30/20 Comparison:</p>
+                <table class="compTable">
+                    <tr>
+                        <td>Needs:</td>
+                        <td id="needsCompVal">$---</td>
+                        <td>50%</td>
+                    </tr>
+                    <tr>
+                        <td>Wants:</td>
+                        <td id="wantsCompVal">$---</td>
+                        <td>30%</td>
+                    </tr>
+                    <tr>
+                        <td>Savings:</td>
+                        <td id="savingsCompVal">$---</td>
+                        <td>20%</td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+
+        <table class="budgetCatsTable">
+            <colgroup>
+                <col span="1" style="width: 20%;">
+                <col span="1" style="width: 30%;">
+                <col span="1" style="width: 50%;">
+            </colgroup>
+            <tr>
+                <th class="budgetCatsTableCell">Budget Category</th>
+                <th class="budgetCatsTableCell">Amount Spent</th>
+                <th class="budgetCatsTableCell">Info</th>
+            </tr>
+            <tr>
+                <td class="budgetCatsTableCell">Transportation</td>
+                <td id="transAmt" class="budgetCatsTableAmt">$-</td>
+                <td id="transInfo" class="budgetCatsTableInfo"></td>
+            </tr>
+            <tr>
+                <td class="budgetCatsTableCell">Housing</td>
+                <td id="houseAmt" class="budgetCatsTableAmt">$-</td>
+                <td id="houseInfo" class="budgetCatsTableInfo"></td>
+            </tr>
+            <tr>
+                <td class="budgetCatsTableCell">Insurance</td>
+                <td id="insAmt" class="budgetCatsTableAmt">$-</td>
+                <td id="insInfo" class="budgetCatsTableInfo"></td>
+            </tr>
+            <tr>
+                <td class="budgetCatsTableCell">Food</td>
+                <td id="foodAmt" class="budgetCatsTableAmt">$-</td>
+                <td id="foodInfo" class="budgetCatsTableInfo"></td>
+            </tr>
+            <tr>
+                <td class="budgetCatsTableCell">Entertainment</td>
+                <td id="entAmt" class="budgetCatsTableAmt">$-</td>
+                <td id="entInfo" class="budgetCatsTableInfo"></td>
+            </tr>
+            <tr>
+                <td class="budgetCatsTableCell">Debt repayments</td>
+                <td id="dbtRepAmt" class="budgetCatsTableAmt">$-</td>
+                <td id="dbtRepInfo" class="budgetCatsTableInfo"></td>
+            </tr>
+            <tr>
+                <td class="budgetCatsTableCell">Retirement</td>
+                <td id="retAmt" class="budgetCatsTableAmt">$-</td>
+                <td id="retInfo" class="budgetCatsTableInfo"></td>
+            </tr>
+
+        </table>
+    </main>
+
+
+</body>
+
+</html>
+    </main>
+
+    <footer>
+        <p>© Connor Tait 2023, All rights reserved.</p>
+    </footer>
+</body>
+
+</html>
